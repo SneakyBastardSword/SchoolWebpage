@@ -1,0 +1,147 @@
+/*Copyright (c) 2016 Ethan Wilton and Conner Bonduraunt
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.*/
+
+body {
+	background-color: #333333;
+}
+#titleBar {
+	text-align: center;
+	background-color: #666666;
+}
+#contentWrapper {
+	width:85%;
+	margin:auto;
+}
+/*code for dropdown menus*/
+.navbarButtonContainer { /*dropdown menu postioning*/
+	position: relative;
+	display: inline-block;
+}
+.navbarDropdown {   /*style of dropdown menus*/
+	display: none;
+	position: absolute; /*position:absolute makes the div collapse into parent until style changes with :hover*/
+	min-width: 160px;
+	background-color: white;
+}
+.navbarDropdown a { /*style of links within dropdown menus*/
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+.navbarDropdown a:hover {
+	background-color: #f1f1f1;
+}    /*color of dropdown links while hovering over*/
+.navbarButtonContainer:hover .navbarDropdown {
+	display: block;
+}  /*makes dropdown menu appear while hovering over buton*/
+.navbarButtonContainer:hover .navbarButton {    /*background + text color of entire dropdown menu*/
+	background-color: white;
+	color:black;
+}
+/*end dropdown menu style*/
+
+.navbarButton {
+	background-color: #333;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 3px;
+	padding-right: 3px;
+	text-decoration: none;
+	color: white;
+}
+#pageBody {
+	background-color: #666;
+	padding:10px 50px;
+}
+.contentHeader {
+	text-align: center;
+}
+.contentImage {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+.contentParagraph {
+	margin-left: 3%;
+	margin-right: 3%;
+}
+/*style for content table system*/
+.contentTable {
+	margin: auto;
+	width: 94%
+}
+.contentTable-cell {
+	background-color: lightblue;
+	border: 2px solid black;
+}
+/*end style for content table system*/
+
+/*style for content alignment system*/
+.contentGrid {
+	width:94%;
+	margin: auto;
+	background-color: white;
+}
+.contentGrid-row {
+	width:100%;
+	display: flex;
+	justify-content: flex-start;
+	display: -webkit-flex;
+	-webkit-justify-content: flex-start;
+}
+.contentGrid-cell {
+	background-color: #f1f1f1;
+	border: 2px solid black;
+}
+/*end style for content alignment system*/
+/*style for slideshow system*/
+.slideShow {
+	background-color: black;
+	height: 300px;
+	width: 94%;
+	margin: auto;
+	position: relative;
+}
+.slideShow figure img {
+	display:block;
+	margin: auto;
+	height: 300px;
+}
+.slideShow-next, .slideShow-prev {
+	position: absolute;
+	opacity: 0.5;
+	-webkit-transition: opacity 1s;
+	-moz-transition: opacity 1s;
+	transition: opacity 1s;
+	background-color: black;
+	color: white;
+	top: 50%;
+}
+.slideShow-next {
+	left: 0%;
+}
+.slideShow-prev {
+	right: 0%;
+}
+.slideShow-next:hover, .slideShow-prev:hover {
+	opacity: 1
+}
+/*end style for slideshow system*/
+
+#copyright-schmopyright {
+	padding-top: 10px;
+	width: 80%;
+	margin: auto;
+}
+#copyright-schmopyright p {
+	font-style: italic;
+	font-size: 10px;
+	margin: auto;
+	text-align: center;
+}
