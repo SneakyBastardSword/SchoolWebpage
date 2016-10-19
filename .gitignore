@@ -215,9 +215,12 @@ pip-log.txt
 #Mr Developer
 .mr.developer.cfg
 
+
+#personal ignores
 *.jpg
 *.png
 *.jpeg
 *.gif
 .misc/*
 .vscode/*
+dwsync.xml
