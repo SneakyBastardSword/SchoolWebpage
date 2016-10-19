@@ -12,7 +12,7 @@
 <body>
 <div id="contentWrapper">
     <div id="titleBar">
-        <h1>Berea Independent School District</h1>
+        <h1><a href="/">Berea Independent School District</a></h1>
         <nav>
             <!--code for dropdown links-->
             <div class="navbarButtonContainer">
@@ -22,34 +22,22 @@
                 </div>
             </div>
             <div class="navbarButtonContainer">
-                <button class="navbarButton">Lorem ipsum dolor</button>
+                <button class="navbarButton">Student Resources</button>
                 <div class="navbarDropdown">
-                    <a  href="http://google.com">Lorem ipsum dolor</a> <a  href="http://google.com">Lorem ipsum dolor</a> <a  href="http://google.com">Lorem ipsum dolor</a>
+                    <a  href="https://infinitecampus.kyschools.us/campus/portal/berea.jsp">Student Campus Portal</a> <a  href="/lunch.php">Lunch Schedule</a> <a  href="/govt.php">Student Government</a>
                 </div>
             </div>
             <div class="navbarButtonContainer">
-                <button class="navbarButton">Lorem ipsum dolor</button>
+                <button class="navbarButton">Parent Resources</button>
                 <div class="navbarDropdown">
-                    <a  href="http://google.com">Lorem ipsum dolor</a> <a  href="http://google.com">Lorem ipsum dolor</a> <a  href="http://google.com">Lorem ipsum dolor</a>
-                </div>
-            </div>
-            <div class="navbarButtonContainer">
-                <button class="navbarButton">Lorem ipsum dolor</button>
-                <div class="navbarDropdown">
-                    <a  href="http://google.com">Lorem ipsum dolor</a> <a  href="http://google.com">Lorem ipsum dolor</a> <a  href="http://google.com">Lorem ipsum dolor</a>
-                </div>
-            </div>
-            <div class="navbarButtonContainer">
-                <button class="navbarButton">Lorem ipsum dolor</button>
-                <div class="navbarDropdown">
-                    <a  href="http://google.com">Lorem ipsum dolor</a> <a  href="http://google.com">Lorem ipsum dolor</a> <a  href="http://google.com">Lorem ipsum dolor</a>
+                    <a  href="/staff.php">Staff Listings</a> <a  href="/events.php">Events Calender</a>
                 </div>
             </div>
         </nav>
     </div>
     <div id="pageBody">
         <!-- InstanceBeginEditable name="content" -->
-        <p> We have tons of cool fall sports!</p>
+        <p> We have tons of cool fall sports! Cross Country, </p>
         <!-- InstanceEndEditable -->
     </div>
 </div>

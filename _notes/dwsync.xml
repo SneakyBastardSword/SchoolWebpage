@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="favicon.ico" server="10.35.16.157" local="131194599000000000" remote="131212725000000000" />
-<file name="index.php" server="10.35.16.157" local="131212712227621312" remote="131212725000000000" />
-<file name="web.config" server="10.35.16.157" local="131206691400000000" remote="131212725000000000" />
+<file name="favicon.ico" server="10.35.16.157" local="131212779000000000" remote="131213601000000000" />
+<file name="index.php" server="10.35.16.157" local="131213662807381367" remote="131213662800000000" />
+<file name="web.config" server="10.35.16.157" local="131212779000000000" remote="131213601000000000" />
+<file name=".gitattributes" server="10.35.16.157" local="131212779000000000" remote="131213601000000000" />
+<file name=".gitignore" server="10.35.16.157" local="131213598722756563" remote="131213601000000000" />
+<file name="govt.php" server="10.35.16.157" local="131213662808241406" remote="131213662800000000" />
+<file name="lunch.php" server="10.35.16.157" local="131213662808721378" remote="131213662800000000" />
+<file name="staff.php" server="10.35.16.157" local="131213662854402426" remote="131213662800000000" />
 </dwsync>

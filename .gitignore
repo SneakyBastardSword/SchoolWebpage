@@ -219,3 +219,5 @@ pip-log.txt
 *.png
 *.jpeg
 *.gif
+.misc/*
+.vscode/*
