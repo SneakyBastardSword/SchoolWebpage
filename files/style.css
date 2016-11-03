@@ -20,6 +20,7 @@ h1 a:hover{color:#000;}
 #titleBar {
 	text-align: center;
 	background-color: #666666;
+	padding-top:1px;
 }
 #contentWrapper {
 	width:85%;
@@ -62,6 +63,7 @@ h1 a:hover{color:#000;}
 	padding-right: 3px;
 	text-decoration: none;
 	color: white;
+	border:thin solid #000;
 }
 #pageBody {
 	background-color: #666;

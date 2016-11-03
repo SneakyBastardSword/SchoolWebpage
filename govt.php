@@ -36,7 +36,13 @@
         </nav>
     </div>
     <div id="pageBody">
-        <!-- InstanceBeginEditable name="content" --> <!-- InstanceEndEditable -->
+        <!-- InstanceBeginEditable name="content" -->
+        <p>These are our student counsel members, the leaders of our community. They work to make sure that the voice of the students is heard loud and clear!</p>
+        
+        <?php
+			
+		?>
+		<!-- InstanceEndEditable -->
     </div>
 </div>
 <div id="copyright-schmopyright">

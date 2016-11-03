@@ -37,7 +37,10 @@
     </div>
     <div id="pageBody">
         <!-- InstanceBeginEditable name="content" -->
-        <p> We have tons of cool fall sports! Cross Country, </p>
+        <p>We have tons of cool fall sports!</p>
+        <p>There is Cross Country, Golf, Soccer, Football, and more.</p>
+        
+        <img src=""	alt="A man in the backswing of a golf swing"/>	
         <!-- InstanceEndEditable -->
     </div>
 </div>

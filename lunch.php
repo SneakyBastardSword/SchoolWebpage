@@ -36,7 +36,13 @@
         </nav>
     </div>
     <div id="pageBody">
-        <!-- InstanceBeginEditable name="content" --> <!-- InstanceEndEditable -->
+        <!-- InstanceBeginEditable name="content" -->
+        <?php
+        	print "This is the lunch menu for the week of ". date("M d",strtotime("last sunday")) ."."
+			
+			
+		?>
+        <!-- InstanceEndEditable -->
     </div>
 </div>
 <div id="copyright-schmopyright">
