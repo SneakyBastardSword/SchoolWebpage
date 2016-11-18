@@ -155,3 +155,12 @@ h1 a:hover{color:#000;}
 	margin: auto;
 	text-align: center;
 }
+
+#galleryWrapper{
+	display:flex;
+	flex-wrap:wrap;
+}
+
+.galleryContent{
+	height:300px;
+}

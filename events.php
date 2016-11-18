@@ -2,12 +2,12 @@
 <html><!-- InstanceBegin template="/Templates/mainLayout.dwt.php" codeOutsideHTMLIsLocked="false" -->
 <head>
     <!-- InstanceBeginEditable name="doctitle" -->
-<title>Berea Community Schools</title>
-<!-- InstanceEndEditable -->
+    <title>Berea Community Schools</title>
+    <!-- InstanceEndEditable -->
     <link rel="stylesheet" type="text/css" href="/files/style.css"/>
     <link rel="shortcut icon" type="image/ico" href="/favicon.ico"/>
     <!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
+    <!-- InstanceEndEditable -->
 </head>
 <body>
 <div id="contentWrapper">
@@ -37,11 +37,8 @@
     </div>
     <div id="pageBody">
         <!-- InstanceBeginEditable name="content" -->
-        <p>We have tons of cool fall sports!</p>
-        <p>There is Cross Country, Golf, Soccer, Football, and more.</p>
-        <div id="galleryWrapper">
-        	<img class="galleryContent" src="/src/ZaneGolf.jpeg" alt="A man in the backswing of a golf swing"/>
-        </div>
+        Upcoming events within the school life!
+        
         <!-- InstanceEndEditable -->
     </div>
 </div>
