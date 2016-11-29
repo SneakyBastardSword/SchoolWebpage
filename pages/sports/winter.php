@@ -18,19 +18,24 @@
             <div class="navbarButtonContainer">
                 <button class="navbarButton">Sports</button>
                 <div class="navbarDropdown">
-                    <a  href="/sports/fall.php">Fall Sports</a> <a  href="/sports/winter.php">Winter Sports</a> <a  href="/sports/spring.php">Spring Sports</a>
+                    <a  href="/pages/sports/fall.php">Fall Sports</a>
+                    <a  href="/pages/sports/winter.php">Winter Sports</a>
+                    <a  href="/pages/sports/spring.php">Spring Sports</a>
                 </div>
             </div>
             <div class="navbarButtonContainer">
                 <button class="navbarButton">Student Resources</button>
                 <div class="navbarDropdown">
-                    <a  href="https://infinitecampus.kyschools.us/campus/portal/berea.jsp">Student Campus Portal</a> <a  href="/lunch.php">Lunch Schedule</a> <a  href="/govt.php">Student Government</a>
+                    <a  href="https://infinitecampus.kyschools.us/campus/portal/berea.jsp">Student Campus Portal</a>
+                    <a  href="/pages/lunch.php">Lunch Schedule</a>
+                    <a  href="/pages/govt.php">Student Government</a>
                 </div>
             </div>
             <div class="navbarButtonContainer">
                 <button class="navbarButton">Parent Resources</button>
                 <div class="navbarDropdown">
-                    <a  href="/staff.php">Staff Listings</a> <a  href="/events.php">Events Calender</a>
+                    <a  href="/pages/staff.php">Staff Listings</a>
+                    <a  href="/pages/events.php">Events Calender</a>
                 </div>
             </div>
         </nav>
