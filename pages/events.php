@@ -7,6 +7,42 @@
     <link rel="stylesheet" type="text/css" href="/files/style.css"/>
     <link rel="shortcut icon" type="image/ico" href="/files/favicon.ico"/>
     <!-- InstanceBeginEditable name="head" -->
+    <script>
+        <?php
+    
+    ini_set('display_errors', 1);
+	ini_set('display_startup_errors', 1);
+	error_reporting(E_ALL);
+			$link = 'localhost';
+			$user = 'dataAccess';
+			$password = 'ReadOnlyAccess';
+			$database = 'webmain';
+			$table = 'calendar';
+
+            $array;
+			
+			$connection = mysqli_connect($link,$user,$password,$database);
+            $query = mysql_query($connection, 
+                'SELECT datestamp, content FROM webmain.calendar
+                    ORDER BY datestamp DESC
+                    LIMIT 100;');
+            
+            $count = 0;
+            while($result = mysqli_fetch_assoc($query)){
+                $array[$count] = ($result['datestamp'], $result['content']);
+                $count++;
+            }
+
+            $echo = '['
+            for($i = 0; $i < sizeof($array); $i++){
+                $echo .= "[\"".$array[$i][0]."\",\"".$array[$i][1] + "\"]";
+            }
+            $echo .= ']'
+            echo $echo
+
+        ?>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="/files/calendar.js" defer="defer"></script>
     <!-- InstanceEndEditable -->
 </head>
 <body>
@@ -42,8 +78,11 @@
     </div>
     <div id="pageBody">
         <!-- InstanceBeginEditable name="content" -->
-        Upcoming events within the school life!
-        
+        <div id="calendar">
+            <h2>Upcoming events within the school life!</h2>
+            <ul>
+            </ul>
+        </div>
         <!-- InstanceEndEditable -->
     </div>
 </div>

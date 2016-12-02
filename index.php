@@ -9,7 +9,7 @@
     <!-- InstanceBeginEditable name="head" -->
     <script>
 		<?php
-		
+    
 			
 	ini_set('display_errors', 1);
 	ini_set('display_startup_errors', 1);
@@ -22,34 +22,60 @@
 			
 			$connection = mysqli_connect($link,$user,$password,$database);
 
-			$array;
+			$slideshow_array = array();
+            $calendar_array = array();
 
-			$query = mysqli_query($connection, "SELECT `name`, `id`, `type`, `description`, `order` FROM `webmain`.slideshow`;");
+            $calendar_query = mysql_query($connection,
+                "SELECT * FROM `webmain`.calendar`
+                    ORDER BY `datestamp` DESC
+                    LIMIT 10;");
+			$slideshow_query = mysqli_query($connection,
+                "SELECT * FROM `webmain`.slideshow`;");
 			
-			if (mysqli_num_rows($query)>0){
+			if (mysqli_num_rows($slideshow_query)>0){
 				$count = 0;
-				while($result = mysqli_fetch_assoc($query)){
-					 $array[$count] = '"'.$result['id'].'.'.$result['type'].'"';
+				while($result = mysqli_fetch_assoc($slideshow_query)){
+					 $slideshow_array[$count] = '"'.$result['id'].'.'.$result['type'].'"';
 					 $count++;
 				}
 			}
+            
+            if(mysqli_num_rows($calendar_query) > 0){
+                $count = 0;
+                while($result = mysqli_fetch_assoc($calendar_query)){
+                    $calendar_array[$count] = array($result['datestamp'], $result['content']);
+                    $count++;
+                }
+            }
 
-			$echo = "var imageArray = [";
-			for ($i=0; $i < sizeof($array); $i++) { 
+			$slideshow_echo = "var imageArray = [";
+			for ($i=0; $i < sizeof($slideshow_array); $i++) { 
 				if($i!=0){
-					$echo .=',';
+					$slideshow_echo .= ',';
 				}
-				$echo .= $array[$i];
+				$slideshow_echo .= $slideshow_array[$i];
 			}
-			$echo .= '];';
+			$slideshow_echo .= '];';
 
-			echo $echo;
+			echo $slideshow_echo;
+
+            $calendar_echo = "var calendarList = [";
+            for($i = 0; $i < sizeof($calendar_array); $i++){
+                if($i != 0){
+                    $slideshow_echo .= ',';
+                }
+                $calendar_echo .= "[\"".$calendar_array[$i][0]."\",\"".$calendar_array[$i][1] + "\"]";
+            }
+
+            echo $calendar_echo;
 
 			mysqli_close($connection);
 			/**/
 		?>
 	</script>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
     <script src="/files/slideshow.js" defer="defer"></script>
+    <script src="/files/calendar.js" defer="defer"></script>
     <!-- InstanceEndEditable -->
 </head>
 <body>
@@ -97,6 +123,17 @@
                 <button class="slideShow-next" onClick={cycleImages(1)}>Next</button>
                 <button class="slideShow-prev" onClick={cycleImages(-1)}>Prev</button>
             </figure>
+        </div>
+        <div class="contentGrid">
+            <div class="contentGrid-row">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Mh5LY4Mz15o" frameborder="0" allowfullscreen></iframe>
+                <div class="calendar">
+                    <h3>Upcoming Events:</h3>
+                    <ul>
+                    </ul>
+                    <a href="/pages/events.php">See All</a>
+                </div>
+            </div>
         </div>
         <!-- InstanceEndEditable -->
     </div>

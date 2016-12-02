@@ -143,6 +143,14 @@ h1 a:hover{color:#000;}
 	opacity: 1
 }
 /*end style for slideshow system*/
+/*style for calendar*/
+.calendar ul li{
+	font-style: italic;
+}
+.calendar ul li span{
+	font-style: normal;
+}
+/*end style for calendar*/
 
 #copyright-schmopyright {
 	padding-top: 10px;
