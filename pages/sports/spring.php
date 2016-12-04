@@ -2,12 +2,23 @@
 <html><!-- InstanceBegin template="/Templates/mainLayout.dwt.php" codeOutsideHTMLIsLocked="false" -->
 <head>
     <!-- InstanceBeginEditable name="doctitle" -->
-    <title>Berea Community Schools</title>
-    <!-- InstanceEndEditable -->
+<title>Berea Community Schools</title>
+<!-- InstanceEndEditable -->
     <link rel="stylesheet" type="text/css" href="/files/style.css"/>
-    <link rel="shortcut icon" type="image/ico" href="/files/favicon.ico"/>
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico"/>
     <!-- InstanceBeginEditable name="head" -->
-    <!-- InstanceEndEditable -->
+    <script>
+        <?php
+            include '/files/connext.php';
+
+            sportCalendar('spring');
+
+            mysqli_close($connection);
+        ?>
+    </script>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="/files/sportcalendar.js" defer="defer"></script>
+<!-- InstanceEndEditable -->
 </head>
 <body>
 <div id="contentWrapper">
@@ -41,7 +52,39 @@
         </nav>
     </div>
     <div id="pageBody">
-        <!-- InstanceBeginEditable name="content" --> <!-- InstanceEndEditable -->
+        <!-- InstanceBeginEditable name="content" -->
+        <p>We have tons of cool spring sports!</p>
+        <p>There is Baseball, Track, Tennis, and more.</p>
+        <div id="galleryWrapper">
+        	<img class="galleryContent" src="/src/ZaneGolf.jpeg" alt="A man in the backswing of a golf swing"/>
+        </div>
+        <div class="sportCalendar">
+            <h4>Baseball</h4>
+            <table id="baseball">
+                <tr>
+                    <th>Date</th>
+                    <th>Location</th>
+                    <th>Other</th>
+                </tr>
+            </table>
+            <h4>Track</h4>
+            <table id="track">
+                <tr>
+                    <th>Date</th>
+                    <th>Location</th>
+                    <th>Other</th>
+                </tr>
+            </table>
+            <h4>Tennis Schedule</h4>
+            <table id="tennis">
+                <tr>
+                    <th>Date</th>
+                    <th>Location</th>
+                    <th>Other</th>
+                </tr>
+            </table>
+        </div>
+        <!-- InstanceEndEditable -->
     </div>
 </div>
 <div id="copyright-schmopyright">

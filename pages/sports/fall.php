@@ -9,39 +9,11 @@
     <!-- InstanceBeginEditable name="head" -->
     <script>
         <?php
-    ini_set('display_errors', 1);
-	ini_set('display_startup_errors', 1);
-	error_reporting(E_ALL);
-			$link = 'localhost';
-			$user = 'dataAccess';
-			$password = 'ReadOnlyAccess';
-			$database = 'webmain';
-			$table = 'sportevents';
+            include '/files/connext.php';
 
-            $array;
-			
-			$connection = mysqli_connect($link,$user,$password,$database);
-            $query = mysql_query($connection, 
-                'SELECT `sport`, `eventdate`, `season`, `notes`, `location`, `eventyear`
-                    FROM webmain.sportevents
-                        WHERE `season`="fall"
-                        WHERE `eventyear`="2017"
-                        ORDER BY eventdate ASC;');
+            sportCalendar('winter');
 
-            
-            $count = 0;
-            while($result = mysqli_fetch_assoc($query)){
-                $array[$count] = ($result['sport'], $result['eventdate'], $result['notes'], $result['location']);
-                $count++;
-            }
-
-            $echo = '['
-            for($i = 0; $i < sizeof($array); $i++){
-                $echo .= "['".$array[$i][0]."','".$array[$i][1]."','".$array[$i][2]."','".$array[$i][3]."']";
-            }
-            $echo .= ']'
-            echo $echo
-
+            mysqli_close($connection);
         ?>
     </script>
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
@@ -105,6 +77,14 @@
             </table>
             <h4>Cross Country Schedule</h4>
             <table id="cross country">
+                <tr>
+                    <th>Date</th>
+                    <th>Location</th>
+                    <th>Other</th>
+                </tr>
+            </table>
+            <h4>Golf</h4>
+            <table id="golf">
                 <tr>
                     <th>Date</th>
                     <th>Location</th>
