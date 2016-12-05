@@ -47,9 +47,11 @@
 		$uploadDir = "c:/inetpub/wwwroot/src";
 		move_uploaded_file($_FILES['image']['tmp_name'],"{$uploadDir}/{$id}.{$type[1]}");
 		echo "Image uploaded, returning to upload form in 5 seconds";
+		sleep(5);		
 	}else{
 		print("No file receved! Redirecting back to upload in 5 seconds");
 	}
+	die('<script type="text/javascript">window.location.reload();</script>');
 ?>
 
 </body>
