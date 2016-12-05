@@ -24,19 +24,22 @@
     <!-- InstanceEndEditable -->
 </head>
 <body>
+<div id="sidebar">
+    <h3>Links</h3>
+    <div class="sidebar-imglinks">
+        <a href="http://facebook.com"><div><img src="/src/static/fb.png"/></div></a>
+        <a href="http://twitter.com"><div><img src="/src/static/tweeter.png"/></div></a>
+    </div>
+    <div class="sidebar-textlinks">
+        <a href="/pages/lunch.php"><div><p>Lunch Schedule</p></div></a>
+        <a href="https://infinitecampus.kyschools.us/campus/portal/berea.jsp"><div><p>Campus Portal</p></div></a>
+    </div>
+</div>
 <div id="contentWrapper">
     <div id="titleBar">
         <h1><a href="/">Berea Independent School District</a></h1>
         <nav>
             <!--code for dropdown links-->
-            <div class="navbarButtonContainer">
-                <button class="navbarButton">Sports</button>
-                <div class="navbarDropdown">
-                    <a  href="/pages/sports/fall.php">Fall Sports</a>
-                    <a  href="/pages/sports/winter.php">Winter Sports</a>
-                    <a  href="/pages/sports/spring.php">Spring Sports</a>
-                </div>
-            </div>
             <div class="navbarButtonContainer">
                 <button class="navbarButton">Student Resources</button>
                 <div class="navbarDropdown">
@@ -52,6 +55,14 @@
                     <a  href="/pages/events.php">Events Calender</a>
                 </div>
             </div>
+            <div class="navbarButtonContainer">
+                <button class="navbarButton">Sports</button>
+                <div class="navbarDropdown">
+                    <a  href="/pages/sports/fall.php">Fall Sports</a>
+                    <a  href="/pages/sports/winter.php">Winter Sports</a>
+                    <a  href="/pages/sports/spring.php">Spring Sports</a>
+                </div>
+            </div>
         </nav>
     </div>
     <div id="pageBody">
@@ -62,12 +73,12 @@
         <div class="slideShow">
             <figure class="slideShow-imageContainer"> <img id="slideshow-image" src="" alt="Image Loading"/> </figure>
             <figure>
-                <button class="slideShow-next" onClick={cycleImages(1)}>Next</button>
-                <button class="slideShow-prev" onClick={cycleImages(-1)}>Prev</button>
+                <div class="slideShow-next" onClick={cycleImages(1)}><a>Next -></a></div>
+                <div class="slideShow-prev" onClick={cycleImages(-1)}><a><- Prev</a></div>
             </figure>
         </div>
         <br>
-        <div class="Grid">
+        <div class="contentGrid">
             <div class="contentGrid-row">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/Mh5LY4Mz15o" frameborder="0" allowfullscreen></iframe>
                 <div class="calendar">

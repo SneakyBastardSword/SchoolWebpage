@@ -11,6 +11,57 @@ body {
 	font-family:Verdana, Geneva, sans-serif;
 }
 
+#sidebar{
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	width: 10%;
+	background-color: #666;
+	text-decoration: none;
+	text-align: center;
+}
+.sidebar-textlinks{
+	background-color: black;
+	padding-top: 0.5px;
+	padding-bottom: 0px;
+}
+.sidebar-textlinks div{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	margin-top: 0.5px;
+	margin-bottom: 0.5px;
+	background-color: #666;
+}
+.sidebar-textlinks div p{
+	text-decoration: none;
+	color: black;
+	font-size: 12px;
+	text-align: left;
+}
+.sidebar-textlinks div:hover{
+	background-color: white;
+}
+.sidebar-imglinks{
+	background-color: black;
+	padding-top: 0.5px;
+	padding-bottom: 0px;
+}
+.sidebar-imglinks div{
+	margin-top: 0.5px;
+	margin-bottom: 0.5px;
+	background-color: #666;
+}
+.sidebar-imglinks div img{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 50%;
+	align-self: center;
+}
+.sidebar-imglinks div:hover{
+	background-color: white;
+}
+
 h1 a{
 	color:#333;
 	text-decoration:none;
@@ -24,11 +75,11 @@ h1 a:hover{color:#000;}
 }
 #contentWrapper {
 	width:85%;
-	margin:auto;
+	margin-left: 175px;
 }
 nav{
 	text-align: left;
-	width: 85%;
+	width: 91%;
 	margin: auto;
 	background-color: #303030
 }
@@ -69,7 +120,10 @@ nav{
 	padding-right: 3px;
 	text-decoration: none;
 	color: white;
-	border:thin solid #000;
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+	border-top: none;
+	border-bottom: none;
 }
 #pageBody {
 	background-color: #666;
@@ -87,7 +141,7 @@ nav{
 	margin-left: 3%;
 	margin-right: 3%;
 }
-/*style for content table system*/
+/*style for basic tables*/
 .contentTable {
 	margin: auto;
 	width: 94%
@@ -96,13 +150,12 @@ nav{
 	background-color: lightblue;
 	border: 2px solid black;
 }
-/*end style for content table system*/
+/*end style for basic tables*/
 
 /*style for content alignment system*/
 .contentGrid {
 	width:94%;
 	margin: auto;
-	background-color: white;
 }
 .contentGrid-row {
 	width:100%;
@@ -118,7 +171,7 @@ nav{
 /*end style for content alignment system*/
 /*style for slideshow system*/
 .slideShow {
-	background-color: black;
+	background-color: #333;
 	height: 300px;
 	width: 94%;
 	margin: auto;
@@ -138,23 +191,34 @@ nav{
 	background-color: black;
 	color: white;
 	top: 50%;
+	padding: 20px;
+	display: inline;
 }
 .slideShow-next {
-	left: 0%;
+	right: 0%;
 }
 .slideShow-prev {
-	right: 0%;
+	left: 0%;
 }
 .slideShow-next:hover, .slideShow-prev:hover {
 	opacity: 1
 }
 /*end style for slideshow system*/
 /*style for calendar*/
+.calendar{
+	background-color: #333;
+	color: white;
+	width: 35%;
+	padding: 10px;
+}
 .calendar ul li{
 	font-style: italic;
 }
 .calendar ul li span{
 	font-style: normal;
+}
+.calendar a{
+	color: white;
 }
 /*end style for calendar*/
 
