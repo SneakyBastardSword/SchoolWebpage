@@ -1,7 +1,7 @@
 function main(){
     var rowTemplate = "<tr> <td></td> <td></td > <td></td> </tr>";
-    for(var i = 0; i < calendarList.length; i++){
-        var sportName = calendarList[i][0]
+    for(var i = 0; i < sportsArray.length; i++){
+        var sportName = sportsArray[i][0]
         switch(sportName){
             case 'cross country':
             case 'archery':
@@ -20,9 +20,9 @@ function main(){
                 var eventType = 'Game';
                 break;
         }
-        var eventDate = calendarList[i][1];
-        var eventNotes = calendarList[i][2];
-        var eventPlace = calendarList[i][3];
+        var eventDate = sportsArray[i][1];
+        var eventNotes = sportsArray[i][2];
+        var eventPlace = sportsArray[i][3];
 
         $('#' + sportName).append(rowTemplate);
         $('#' + sportName + ' tr:last-child td:first-child').text(eventDate);

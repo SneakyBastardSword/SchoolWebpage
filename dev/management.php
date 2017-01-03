@@ -18,7 +18,7 @@
 	$connection = mysqli_connect($link,$user,$password,$database);
 
 	if(isset($_POST['submit'])){
-		if($_POST['actionType'] == 'remove'){
+		if($_POST['actionType'] == 'slideshow-remove'){
 			for($i=0; $i<sizeof($_POST['imageSelection']); $i++){
 				$query = "DELETE FROM `{$database}`.`{$table}` WHERE `id`=\"{$_POST['imageSelection'][$i]}\"";
 				mysqli_query($connection, $query);
@@ -31,7 +31,8 @@
 <form method="post">
 <div>
 	<select name="actionType">
-    	<option value="remove">delete</option>
+    	<option value="slideshow-remove">delete slideshow images</option>
+		<option value="event-add">add calendar event</option>
     </select>
 	<button name="submit" value="true">Do action</button>
 </div>

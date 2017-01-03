@@ -46,6 +46,8 @@ body {
 	background-color: black;
 	padding-top: 0.5px;
 	padding-bottom: 0px;
+	display: flex;
+	justify-content: space-around;
 }
 .sidebar-imglinks div{
 	margin-top: 0.5px;
@@ -55,7 +57,7 @@ body {
 .sidebar-imglinks div img{
 	margin-top: 10px;
 	margin-bottom: 10px;
-	width: 50%;
+	width: 30%;
 	align-self: center;
 }
 .sidebar-imglinks div:hover{

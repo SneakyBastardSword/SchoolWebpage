@@ -1,5 +1,5 @@
 function main(){
-    entryTemplate = '<li class="calendarEntry"><span></span></li>';
+    var entryTemplate = '<li class="calendarEntry"><span></span></li>';
     for(var i = 0; i < calendarList.length; i++){
         $('.calendar ul').append(entryTemplate);
         $('.calendarEntry:last-child').text(calendarList[i][0]);
