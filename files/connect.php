@@ -11,7 +11,31 @@ $database = 'webmain';
 
 $connection = mysqli_connect($link,$user,$password,$database);
 
-/*commented out until other php/mysql bugs are fixed:*/
+function jsvar_from_query($varname, $query, $echo=TRUE){
+    $jsvar = 'var '.$varname.' = [';
+    if (mysqli_num_rows($query)>0){
+        $count = 0;
+        while($result = mysqli_fetch_assoc($query)){
+            $jsvar .= '{';
+            foreach ($result as $key => $value){
+                $jsvar .= '"'.$key.'": "'.$value.'",';
+            }
+            $jsvar .= '},';
+            $count++;
+        }
+    }
+    $jsvar .= '];';
+    if($echo){
+        echo $jsvar;
+    }
+    return $jsvar;
+}
+
+function query_as_jsvar($varname, $raw_query, $echo=TRUE){
+    $parsed_query = mysqli_query($GLOBALS['connection'], $raw_query);
+    return jsvar_from_query($varname, $parsed_query, $echo);
+}
+//commented out until other php/mysql bugs are fixed:
 /*function clean_old_events($table){
     $query = mysqli_query($GLOBALS['connection'],
         'SELECT datestamp FROM '.$table);
@@ -31,75 +55,22 @@ $connection = mysqli_connect($link,$user,$password,$database);
     }
 }*/
 
+/*keep these handy for interfacing with legacy code
 function slideshow(){
-    $array = [];
-    $query = mysqli_query($GLOBALS['connection'], "SELECT * FROM `webmain`.`slideshow`");
-
-    if (mysqli_num_rows($query)>0){
-        $count = 0;
-        while($result = mysqli_fetch_assoc($query)){
-            $array[$count] = '"'.$result['id'].'.'.$result['type'].'"';
-            $count++;
-        }
-    }
-    $echo = "var imageArray = [";
-    for ($i=0; $i < sizeof($array); $i++) { 
-        if($i!=0){
-            $echo .= ',';
-        }
-        $echo .= $array[$i];
-    }
-    $echo .= '];';
-    echo $echo;
+    query_as_jsvar('imageArray', "SELECT `id`, `type` FROM `webmain`.`slideshow`");
 }
-
 
 function calendar($limit='10'){
-    $array =[];
-    $query = mysqli_query($GLOBALS['connection'], 
-        "SELECT * FROM `webmain`.`calendar`
-            ORDER BY `datestamp` DESC
-            LIMIT ".$limit.";");
-    
-    if(mysqli_num_rows($query) > 0){
-        $count = 0;
-        while($result = mysqli_fetch_assoc($query)){
-            $array[$count] = array($result['datestamp'], $result['content']);
-            $count++;
-        }
-    }
-    $echo = "var calendarList = [";
-    for($i = 0; $i < sizeof($array); $i++){
-        if($i != 0){
-            $slideshow_echo .= ',';
-        }
-        $echo .= "[\"".$array[$i][0]."\",\"".$array[$i][1] + "\"]";
-    }
-    echo $echo;
+    query_as_jsvar('calendarList', "SELECT `datestamp`, `content` FROM `webmain`.`calendar`
+                                        ORDER BY `datestamp` DESC
+                                        LIMIT ".$limit.";");
 }
-
 
 function sportCalendar($season){
-    $array =[];
-    $query = mysqli_query($GLOBALS['connection'], 
-        'SELECT `sport`, `datestamp`, `season`, `notes`, `location`, `eventyear`
-            FROM `webmain`.`sportevents`
-                WHERE `season`="'.$season.'"
-                WHERE `eventyear`="2017"
-                ORDER BY datestamp ASC;');
-        
-    $count = 0;
-    while($result = mysqli_fetch_assoc($query)){
-        $array[$count] = array($result['sport'], $result['datestamp'], $result['notes'], $result['location']);
-        $count++;
-    }
-
-    $echo = 'var sportsArray = [';
-    for($i = 0; $i < sizeof($array); $i++){
-        $echo .= "['".$array[$i][0]."','".$array[$i][1]."','".$array[$i][2]."','".$array[$i][3]."']";
-    }
-    
-    $echo .= ']';
-    echo $echo;
-}
+    query_as_jsvar('sportsArray', 'SELECT `sport`, `datestamp`, `season`, `notes`, `location`, `eventyear`
+                                        FROM `webmain`.`sportevents`
+                                        WHERE `season`="'.$season.'"
+                                        WHERE `eventyear`="2017"
+                                        ORDER BY datestamp ASC;');
+}*/
 ?>

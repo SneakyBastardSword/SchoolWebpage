@@ -12,10 +12,9 @@
             include '/files/connect.php';
 
             calendar(100);
-
             mysqli_close($connection);
-
         ?>
+    </script>
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
     <script src="/files/calendar.js" defer="defer"></script>
     <!-- InstanceEndEditable -->

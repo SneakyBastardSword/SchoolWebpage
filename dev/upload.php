@@ -50,6 +50,7 @@
 		sleep(5);		
 	}else{
 		print("No file receved! Redirecting back to upload in 5 seconds");
+		die('<script type="text/javascript">window.location.reload();</script>')
 	}
 	die('<script type="text/javascript">window.location.reload();</script>');
 ?>

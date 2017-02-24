@@ -13,7 +13,6 @@
 
 			slideshow();
             calendar();
-
 			mysqli_close($connection);
 		?>
 	</script>

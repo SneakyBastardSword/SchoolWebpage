@@ -5,5 +5,15 @@
 	height:100px;
 }
 .imageSelectionField{display:flex; flex-direction:row; flex-wrap:wrap; justify-content:center;}
-.selector { display: inline-block; position: relative; height: 100px; margin: 10px; }
-.checkbox { position: absolute; top: 0px; left: 0px; }
+.selector{ display: inline-block; position: relative; height: 100px; margin: 10px;}
+.checkbox{position: absolute; top: 0px; left: 0px;}
+
+/*sportevent and calendar editors*/
+.dbEditor table{
+	width: 100%;
+	padding: 10px;
+}
+.dbEditor table tr td{
+	margin: auto;
+	border: 1px solid black;
+}
